@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-
+import java.util.Random;
 
 public class Main
 {
-    public class Game {
+    public static class Game {
         private String name;
         private String category;
         private int price;
@@ -414,7 +414,7 @@ public class Main
             }
         }
     }
-    public class GenerateData {
+    public  static class GenerateData {
         private static final String[] nombre = {"Dragon", "Empire", "Quest", "Galaxy", "Legends", "Warrior",
                 "Shadow", "Kingdom", "Adventure", "Chronicle", "Hero", "Dark"};
         private static final String[] categoria = {"Acción", "Aventura", "Estrategia", "RPG", "Deportes", "Simulación",
@@ -440,17 +440,18 @@ public class Main
             return games;
         }
 
-        public static void main(String[] args) {
-            ArrayList<Game> juegos = generateGames(10);
 
-            System.out.println("Juegos generados:");
-            for (Game juego : juegos) {
-                System.out.println("Nombre: " + juego.getName() +
-                        ", Categoría: " + juego.getCategory() +
-                        ", Precio: " + juego.getPrice() +
-                        ", Calidad: " + juego.getQuality());
-}
-}a
+    }
+    public static void main(String[] args) {
+        ArrayList<Game> juegos = GenerateData.generateGames(10);
+
+        System.out.println("Juegos generados:");
+        for (Game juego : juegos) {
+            System.out.println("Nombre: " + juego.getName() +
+                    ", Categoría: " + juego.getCategory() +
+                    ", Precio: " + juego.getPrice() +
+                    ", Calidad: " + juego.getQuality());
+        }
     }
 
 
